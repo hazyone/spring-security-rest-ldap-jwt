@@ -10,5 +10,5 @@ data class LdapConfigProperties(
     val managerDn: String,
     val managerPassword: String,
     val userDnPatterns: String,
-    val groupOfSearch: Boolean
+    val memberOfSearch: Boolean
 )

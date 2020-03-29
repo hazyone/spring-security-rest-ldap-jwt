@@ -5,7 +5,7 @@ ldap:
   managerDn: uid=bob,ou=people,dc=springframework,dc=org
   managerPassword: bob
   userDnPatterns: UID={0},OU=people
-  groupOfSearch: false
+  memberOfSearch: false
 spring:
   ldap:
     embedded:

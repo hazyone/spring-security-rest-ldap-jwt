@@ -66,7 +66,7 @@ class SecurityConfig @Autowired constructor(val contextSource: ContextSource, va
 
     @Bean
     fun ldapAuthoritiesPopulator() : LdapAuthoritiesPopulator? {
-        if (!ldapConfigProperties.groupOfSearch) {
+        if (!ldapConfigProperties.memberOfSearch) {
             //Specifies DefaultLdapAuthoritiesPopulator, which gets the Role by reading the members of available groups
             return null
         }

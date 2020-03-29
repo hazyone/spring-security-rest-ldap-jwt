@@ -10,7 +10,17 @@ Uses an internal or a suitable external LDAP implementation. It also allows you 
  * Docker (in case you need an openldap container)
 
 ### LDAP Settings
-Change your settings inside application.yml if you need an external LDAP server. In this case you have to set managerDn parameter to uid only string (without RDN, just username)
+Change your settings inside application.yml if you need an external LDAP server. In this case you have to set:
+- `url` parameter to external ldap url
+- `managerDn` parameter to uid only string (without RDN, just username)
+
+Also you can switch obtaining user groups mechanism with `memberOfSearch`, so
+- `false` triggers default spring ldap group retrieving
+- `true` triggers `CustomLdapAuthoritiesPopulator`, in this case groups retrieving from memberof attribute
+
+Check your ldap server has memberof layer provider. Internal ubnoundid-ldap does not support this option
+
+
 
 ### Usage examples
 - GET request to restricted path with no JWT
