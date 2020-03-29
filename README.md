@@ -9,7 +9,7 @@ Uses an internal or a suitable external LDAP implementation. It also allows you 
  * Kotlin 1.3 (jvm 1.8)
  * Docker (in case you need an openldap container)
 
-### LDAP Settings
+#### LDAP Settings
 Change your settings inside application.yml if you need an external LDAP server. In this case you have to set:
 - `url` parameter to external ldap url
 - `managerDn` parameter to uid only string (without RDN, just username)
