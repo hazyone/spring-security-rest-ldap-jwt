@@ -1,0 +1,14 @@
+jwt:
+  expiresInMinutes: 15
+ldap:
+  url: ldap://localhost:8389/dc=springframework,dc=org
+  managerDn: uid=bob,ou=people,dc=springframework,dc=org
+  managerPassword: bob
+  userDnPatterns: UID={0},OU=people
+  groupOfSearch: false
+spring:
+  ldap:
+    embedded:
+      base-dn : dc=springframework,dc=org
+      ldif: classpath:test-server.ldif
+      port: 8389
